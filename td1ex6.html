@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  
+  <title>Exercice 6</title>
+</head>
+<body>
+
+  <h1 onclick="centrage_h1()">Titre cliquable</h1>
+  
+  <p id="paragraphe" onclick="modif_paragraphe()">Ceci est un paragraphe. Cliquez ici pour effectuer une modification.</p>
+
+  <script>
+    // Fonction pour modifier le paragraphe
+    function modif_paragraphe() {
+      // Sélectionner le paragraphe par son identifiant
+      let paragraphe = document.getElementById("paragraphe");
+
+      // Remplacer le mot "original" par "corrigé" en italique
+      paragraphe.innerHTML = paragraphe.innerHTML.replace("original", "<i>corrigé</i>");
+    }
+
+    // Fonction pour centrer le premier h1
+    function centrage_h1() {
+      // Sélectionner le premier h1 sur la page
+      let premierH1 = document.querySelector('h1');
+
+      // Modifier l'attribut align avec la valeur "center"
+      premierH1.setAttribute('style', 'text-align: center');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Exercice 3</title>
+</head>
+<body>
+  <script>
+    // Les chaînes initiales
+    let str1 = "abc";
+    let str2 = "de";
+
+    // Liste pour stocker les résultats
+    let result = [];
+
+    // Boucles for classiques pour obtenir ['ad', 'ae', 'bd', 'be', 'cd', 'ce']
+    for (let i = 0; i < str2.length; i++) {
+      for (let j = 0; j < str1.length; j++) {
+        result.push(str2[i] + str1[j]);
+      }
+    }
+
+    // Afficher le résultat dans la console
+    console.log(result);
+  </script>
+</body>
+</html>
+
+

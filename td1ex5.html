@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+ 
+  <title>Exercice 5</title>
+</head>
+<body>
+  <script>
+    // Fonction pour générer un entier aléatoire entre min et max inclus
+    function entierAleatoire(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    // Générer un chiffre aléatoire entre 0 et 10
+    let chiffreAleatoire = entierAleatoire(0, 10);
+
+    // Nombre d'essais permis
+    let essaisRestants = 3;
+
+    // Boucle pour permettre à l'utilisateur de faire 3 essais
+    while (essaisRestants > 0) {
+      // Demander à l'utilisateur de deviner le nombre
+      let guess = prompt("Devinez le nombre entre 0 et 10");
+
+      // Vérifier si la devinette est correcte
+      if (parseInt(guess) === chiffreAleatoire) {
+        alert("Bravo! Vous avez deviné le bon nombre.");
+        break;
+      } else {
+        alert("Désolé, ce n'est pas le bon nombre.");
+        essaisRestants--;
+      }
+    }
+
+    // Afficher un message si l'utilisateur n'a pas deviné correctement après 3 essais
+    if (essaisRestants === 0) {
+      alert("Dommage! Vous avez utilisé tous vos essais. Le nombre était : " + chiffreAleatoire);
+    }
+  </script>
+</body>
+</html>
