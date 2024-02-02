@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Exercice 2</title>
+</head>
+<body>
+  <script>
+  
+
+    function Nombres_parfait(n) {
+      for (let i = 2; i < n; i++) {
+        if (i === sommesDiviseurs(i)) {
+          console.log(i);
+        }
+      }
+    }
+
+    // Exemple d'utilisation avec n=30
+    Nombres_parfait(30);
+  </script>
+</body>
+</html>
